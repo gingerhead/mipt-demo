@@ -8,6 +8,7 @@
 ./integration/bin/main.sh up
 ```
 (В другом терминале)
+
 4. Запустите ```cd ./server && npx prisma migrate deploy```
 5. Запустите ```npx prisma generate```
 6. Запустите ```npx prisma db seed```
