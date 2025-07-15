@@ -1,0 +1,27 @@
+## Setup
+
+1. Скопируйте .env.example в .env и установите переменные (при необходимости) 
+2. В терминале выполните команду ```npm run install ```
+3. Запустите docker compose с DB командой
+```
+./integration/bin/main.sh up
+```
+4. (В другом терминале) Запустите ```cd ./server && npx prisma migrate deploy``` 
+5. (В другом терминале) Запустите ```cd ./server && npx prisma db seed```
+
+## Запуск
+
+### Dev
+
+```
+// В одном терминале
+./integration/bin/main.sh up
+
+// В другом терминале 
+npm run start:dev
+```
+
+#### Reset db, run migrations, run seed
+```
+cd ./server && npx prisma migrate reset
+```

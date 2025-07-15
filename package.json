@@ -1,0 +1,17 @@
+{
+  "name": "mipt-mis",
+  "version": "1.0.0",
+  "description": "Demo project for MIPT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:install": "cd ./server && npm ci && cd -",
+    "client:install": "cd ./client && npm ci && cd -",
+    "install": "npm run server:install && npm run client:install",
+    "client:run": "cd ./client && npm run dev",
+    "server:run": "cd ./server && npm run start:dev",
+    "start:dev": "npx concurrently \"npm run client:run\" \"npm run server:run\""
+  },
+  "author": "",
+  "license": "ISC"
+}
